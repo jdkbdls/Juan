@@ -10,9 +10,9 @@ with open('list.txt', 'r') as list_file:
 # list = ["2330.TW"]
 for stock_id in list:
     stock = yf.Ticker(stock_id)
-    historical_data = pd.DataFrame()
-    df = stock.history(period="3y",rounding=True)
-    historical_data = pd.concat([historical_data, df])
-    historical_data.to_hdf("data/"+stock_id+".h5",key="s")
+    df = pd.DataFrame()
+    stock_history = stock.history(period="3y",rounding=True)
+    df = pd.concat([df, stock_history])
+    df.to_hdf("data/"+stock_id+".h5",key="s")
     print(stock_id)
     del df
