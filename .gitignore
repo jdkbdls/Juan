@@ -19,6 +19,7 @@ nohup.out
 # Both the directory itself and its contents will be ignored.
 #bin/
 #gen/
+data/
 
 # Glob pattern can also be used here to ignore paths with certain characters.
 # For example, the below rule will match both build/ and Build/

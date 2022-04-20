@@ -31,8 +31,8 @@ for stock_id in list_stock_all:
     CAL_MA()
     TA = Technical(df)
     # if TA.volume_3days_ave_increase(3):
-    if TA.volume_n_times_increase(5):
-    # if TA.price_up(4,3) & TA.red_k(4,3):
+    # if TA.volume_n_times_increase(5):
+    if TA.price_up(5,3) & TA.red_k(5,3) & TA.volume_3days_ave_increase(5):
         print(stock_id)
     # if 
 
